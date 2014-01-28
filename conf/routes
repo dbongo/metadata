@@ -35,14 +35,17 @@ GET     /webjars/*file                  controllers.WebJarAssets.at(file)
 
 ## ~~~ AngularJS
 # angular-auth app
-GET      /angular-auth/                  controllers.UIAssets.at(path = "/ngApps/angular-auth", file = "index.html")
-GET      /angular-auth/*file             controllers.UIAssets.at(path = "/ngApps/angular-auth", file)
+#GET      /angular-auth/                  controllers.UIAssets.at(path = "/ngApps/angular-auth", file = "index.html")
+#GET      /angular-auth/*file             controllers.UIAssets.at(path = "/ngApps/angular-auth", file)
+
+GET      /                               controllers.UIAssets.at(path = "/ngApps/main", file = "index.html")
+GET      /*file                          controllers.UIAssets.at(path = "/ngApps/main", file)
 
 
 # angular-rest app
-GET      /angular-rest/                controllers.UIAssets.at(path = "/ngApps/angular-rest", file = "index.html")
-GET      /angular-rest/*file           controllers.UIAssets.at(path = "/ngApps/angular-rest", file)
+#GET      /angular-rest/                controllers.UIAssets.at(path = "/ngApps/angular-rest", file = "index.html")
+#GET      /angular-rest/*file           controllers.UIAssets.at(path = "/ngApps/angular-rest", file)
 
 # main app (the lowest priority)
-GET      /                               controllers.UIAssets.at(path = "/ngApps/main", file = "index.html")
-GET      /*file                          controllers.UIAssets.at(path = "/ngApps/main", file)
+#GET      /                               controllers.UIAssets.at(path = "/ngApps/main", file = "index.html")
+#GET      /*file                          controllers.UIAssets.at(path = "/ngApps/main", file)
